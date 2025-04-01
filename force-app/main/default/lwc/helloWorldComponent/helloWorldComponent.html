@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+      <div class="slds-m-around_medium">
+        <p>Hello, {greeting}!</p>
+        <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+      </div>
+    </lightning-card>
+    <div>
+      <lightning-input label="First Name" value={firstName} onchange={changeNameHandler}></lightning-input>
+      <lightning-input label="Last Name" value={lastName} onchange={changeNameHandler}></lightning-input>
+      <p>{getFullname}</p>
+    </div>
+    <template lwc:if={isHellow}>
+      <p> This is a if statement</p>
+    </template>
+    <template lwc:else>
+      <p>This is a else statement</p>
+    </template>
+    <c-info-component baseurl={baseURL}></c-info-component>
+  </template>
